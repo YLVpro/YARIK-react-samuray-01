@@ -1,0 +1,102 @@
+
+.laine {
+  color:chartreuse;
+  margin-top: 50px;
+  font-size: 45px;
+}
+
+
+.y_container {
+  width: 250px;
+  height: 250px; 
+  background-color: #1b1091;
+  margin-right: 10px; 
+  margin-bottom: 10px;
+  float: left; /* Обтекание по правому краю */
+  position: absolute;
+}
+
+.y_book_text {
+  width: 50px;
+  height: 50px;
+  background-color: #e00da5;
+   
+  position: absolute; /* позиционировал - прочно указал место "верх-лево" */
+    right: 0px;
+    bottom: 0px;
+   width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center; /* выровнял текст по ВЫСОТЕ */
+  justify-content: center; /* выровнял текст по ШИРИНЕ */
+  border-radius: 50%;
+  background: pinck;
+  
+  
+}
+
+
+
+.y_book_neighbor {
+  width: 100px;
+  height: 100px; 
+  background-color: #2b7a0d;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: left; /* Обтекание по правому краю */
+  border-radius: 10px;
+  padding: 15px;
+  margin-left: 280px;
+  color: #fff;
+  font-size: 65px;
+  //text-align: center;
+  position: absolute;
+  text-align: center;
+}
+
+
+
+
+/* конгец ТВОЕГО  CSS  */
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
