@@ -1,5 +1,5 @@
 import React from 'react';
-import c from './ProfileInfo.module.css';
+import s from './ProfileInfo.module.css';
 
 
 const ProfileInfo = () => {
@@ -9,7 +9,7 @@ const ProfileInfo = () => {
             <div>
                 <img src='https://alfaplusgo.com/assets/images/slides/1601007464.jpg' />
             </div>
-            <div className={c.descriptionBlock}>
+            <div className={s.descriptionBlock}>
                 ava + description
         </div>
         </div>
