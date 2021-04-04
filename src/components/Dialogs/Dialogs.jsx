@@ -1,21 +1,34 @@
 import React from 'react';
-import c from './Dialogs.module.css';
-import DialogItem from './DialogItem/DialogItem';
-import Message from './Message/Message';
+import s from './Dialogs.module.css';
+import DialogItem from "./DialogItem/DialogItem";
+import Message from "./Message/Message";
 
 const Dialogs = (props) => {
+    let dialogsElements = props.state.dialogs.map( d => <DialogItem name={d.name} id={d.id} /> );
+    let messagesElements = props.state.messagesPage.map( m => <Message message={m.message}/> );
 
-    let dialogsElements = props.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />);
+    let dialogsElement = React.createRef();
 
-    let messagesElements = props.messages.map(message => <Message message={message.message} />);
-
+    let add = () => {
+        let text = dialogsElements.current.value;
+        alert(text);
+    }
+    
     return (
-        <div className={c.dialogs}>
-            <div className={c.dialogsItems}>
-
+        <div className={s.dialogs}>
+            <div className={s.dialogsItems}>
                 {dialogsElements}
+                <div className={s.postsBlock}></div>
+            <h3> </h3>
+                <div>
+                    <textarea ref={dialogsElements}></textarea>
+                </div>
+
+                <div>
+                    <button onClick={ add }>Add</button>
+                </div>
             </div >
-            <div className={c.messages}>
+            <div className={s.messages}>
                 {messagesElements}
             </div>
         </div >

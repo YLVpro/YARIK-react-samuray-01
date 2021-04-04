@@ -12,3 +12,25 @@
   .item a.active {
       color:gold;
   }
+  
+  .kolo {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 100px;
+    line-height: 110px;
+
+  }
+  
+  .kolo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color:yellow;
+    font-size: 16px;
+    
+  }
+
+  
+
+  
