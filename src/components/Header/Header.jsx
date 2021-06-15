@@ -1,7 +1,7 @@
 import React from 'react';
-import c from './Header.module.css';
+import s from './Header.module.css';
 const Header = () => {
-    return <header className={c.header}>
+    return <header className={s.header}>
         <img src='https://i.ytimg.com/vi/SqEhRM_84Rc/maxresdefault.jpg' />
     </header>
 }

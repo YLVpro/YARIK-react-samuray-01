@@ -1,5 +1,5 @@
 import React from 'react';
-import c from './MyPosts.module.css';
+import s from './MyPosts.module.css';
 import Post from './Post/Post';
 
 const MyPosts = (props) => {
@@ -9,23 +9,26 @@ const MyPosts = (props) => {
     let newPostElement = React.createRef();
 
     let addPost = () => {
-        let text = newPostElement.current.value;
-        props.addPost(text);
-        newPostElement.current.value = '';
+        props.dispatch({ type: 'ADD-POST' });
     }
-    
+
+    let onPostChange = () => {
+        props.dispatch({type: 'UPDATE-NEW-POST-TEXT'});
+    }  
+
     return (
-        <div className={c.postsBlock}>
+        <div className={s.postsBlock}>
             <h3>My posts</h3>
             <div>
                 <div>
-                    <textarea ref={newPostElement}></textarea>
+                    <textarea onChange={onPostChange} ref={newPostElement}
+                            value={props.newPostText} />
                 </div>
                 <div>
                     <button onClick={ addPost }>Add Post</button>
                 </div>
             </div>
-            <div className={c.posts}>
+            <div className={s.posts}>
                 {postsElements}
             </div>
         </div>

@@ -22,4 +22,8 @@ function App() {
   );
 }
 
+
+
+Gповерка связи
+
 export default App;

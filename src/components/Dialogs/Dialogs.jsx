@@ -10,20 +10,23 @@ const Dialogs = (props) => {
     let dialogsElement = React.createRef();
 
     let add = () => {
-        let text = dialogsElements.current.value;
-        alert(text);
+        props.add();
     }
-    
+
+    let onPostChange = () => {
+        let text = dialogsElement.current.value;
+        props.updateNewPostText(text);
+    }
+
+
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
                 {dialogsElements}
                 <div className={s.postsBlock}></div>
             <h3> </h3>
-                <div>
-                    <textarea ref={dialogsElements}></textarea>
-                </div>
-
+            <textarea onChange={onPostChange} ref={dialogsElement}
+                            value={props.newPostText} />
                 <div>
                     <button onClick={ add }>Add</button>
                 </div>
